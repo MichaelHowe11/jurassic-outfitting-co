@@ -3,37 +3,89 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
-    <section>
-        <div>
-            <h2>Package Name</h2>
-            <p>Stuff about expeditions</p>
-            <p>price</p>
-            <button>Add to Cart</button>
-        </div>
-    </section>
-    <section>
-        <article>
-            <h4></h4>
-            <select name="Gender">
-                <option value="men's">Men's</option>
-                <option value="women's">Women's</option>
-                <option value="boys'">Boys'</option>
-                <option value="girls'">Girls'</option>
-                <option value="toddlers''">Toddlers'</option>
-            </select>
-            <select name="Size">
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-            </select>
-            <img src="" alt="">
-        </article>
-    </section>
+    <header>
+        <nav>
+            <a href="home.html"><img src="images/header-images/logo.svg"
+                    alt="jurassic outfitting company logo; homepage button"></a>
+            <h1><a href="expedition-packages.html">Packages</a></h1>
+            <a href="product-categories/all-products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="shopping-cart.html"><img src="images/header-images/shopping-cart.svg" alt="shopping cart"></a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2>Package Name</h2>
+                <p>descrip</p>
+            </div>
+        </section>
+        <section>
+            <h3>Package Items</h3>
+            <form>
+                <fieldset>
+                    <legend>Item Name</legend>
+                    <select name="Gender">
+                        <option value="Men's">Men's</option>
+                        <option value="Women's">Women's</option>
+                        <option value="Boys'">Boys'</option>
+                        <option value="Girls'">Girls'</option>
+                        <option value="Toddlers'">Toddlers'</option>
+                    </select>
+                    <select name="Size">
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+                    <img src="" alt="">
+                </fieldset>
+                <input type="submit" value="Add to Cart">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h4>Contact Us</h4>
+            <address>
+                <ul>
+                    <li><a href="tel:+506-755-562-41">506-755-562-41</a></li>
+                    <li><a href="mailto:jurassicoutfitting@gmail.com">Send email</a></li>
+                </ul>
+            </address>
+        </section>
+        <section>
+            <h4>About</h4>
+            <ul>
+                <li><a href="about.html#who-we-are">Who we are</a></li>
+                <li><a href="about.html#our-story">Our Story</a></li>
+                <li><a href="about.html#founders">Founders</a></li>
+            </ul>
+        </section>
+        <section>
+            <h4>Products</h4>
+            <ul>
+                <li><a href="product-categories/all-products.html">All Products</a></li>
+                <li><a href="product-categories/expedition-wear.html">Expedition Wear</a></li>
+                <li><a href="product-categories/equipment.html">Equipment</a></li>
+                <li><a href="product-categories/electronics.html">Electronics</a></li>
+                <li><a href="product-categories/protection.html">Protection</a></li>
+            </ul>
+        </section>
+        <section>
+            <h4>Expedition Packages</h4>
+            <ul>
+                <li><a href="expedition-packages.html#premium-packages">Premium Packages</a></li>
+                <li><a href="expedition-packages.html#basic-packages">Basic Packages</a></li>
+                <li><a href="expedition-packages.html#mega-premium-package">Mega Premium Package</a></li>
+            </ul>
+        </section>
+    </footer>
 </body>
 
 </html>

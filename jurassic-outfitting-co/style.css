@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #D7D3C6;
+    margin: 0;
+}
+
+header{
+    background-color: #B2A696;
+    margin:0;
+}
+.site-nav{
+    display: flex;
+}
+
+
+footer{
+    background-color: #B2A696;
+    display:flex;
+}
