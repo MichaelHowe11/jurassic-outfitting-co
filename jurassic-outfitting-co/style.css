@@ -59,6 +59,9 @@ footer{
     display: flex;
     flex-flow:column-reverse nowrap;
 }
+.categories-homepage section a:last-of-type{
+    width:100%;
+}
 .categories-homepage section a img{
     width:10%;
 }
