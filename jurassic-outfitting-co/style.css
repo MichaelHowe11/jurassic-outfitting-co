@@ -1,22 +1,44 @@
 *{
     box-sizing: border-box;
 }
-
 body{
     background-color: #D7D3C6;
     margin: 0;
 }
-
 header{
     background-color: #B2A696;
-    margin:0;
 }
 .site-nav{
+    margin:0 10% 0 10%;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
-
-
+header nav a{
+    color: #14183B;
+    text-decoration: none;
+    font-size: 3em;
+}
 footer{
     background-color: #B2A696;
+}
+.footer-wrapper{
+    margin:0 10% 0 10%;
     display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+ /* homepage */
+.homepage-banner{
+    background-image: url(images/banner-images/homepage-image.jpg);
+    background-size: cover;
+    height:40vh;
+}
+.homepage-banner div{
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    margin: auto ;
+    background-color: #C4C896;
 }
