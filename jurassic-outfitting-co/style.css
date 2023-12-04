@@ -49,5 +49,16 @@ footer{
     margin:auto;
 }
 .categories-homepage{
-    
+    display: flex;
+    flex-flow: row wrap;
+}
+.categories-homepage h2{
+    width:100%;
+}
+.categories-homepage section a{
+    display: flex;
+    flex-flow:column-reverse nowrap;
+}
+.categories-homepage section a img{
+    width:10%;
 }
