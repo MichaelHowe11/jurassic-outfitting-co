@@ -34,6 +34,7 @@ footer{
     background-image: url(images/banner-images/homepage-image.jpg);
     background-size: cover;
     height:40vh;
+    display: flex;
 }
 .homepage-banner div{
     display: flex;
@@ -41,4 +42,12 @@ footer{
     width: 50%;
     margin: auto ;
     background-color: #C4C896;
+    padding: 20px;
+    max-width: 650px;
+}
+.homepage-banner div a{
+    margin:auto;
+}
+.categories-homepage{
+    
 }
