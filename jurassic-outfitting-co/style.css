@@ -1,3 +1,4 @@
+/* every page */
 *{
     box-sizing: border-box;
 }
@@ -48,9 +49,13 @@ footer{
 .homepage-banner div a{
     margin:auto;
 }
+.categories-homepage, .customer-experiences{
+    margin:0 10%;
+}
 .categories-homepage{
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 .categories-homepage h2{
     width:100%;
@@ -59,9 +64,40 @@ footer{
     display: flex;
     flex-flow:column-reverse nowrap;
 }
-.categories-homepage section a:last-of-type{
+.categories-homepage section:last-of-type
+{
     width:100%;
 }
-.categories-homepage section a img{
-    width:10%;
+.categories-homepage section{
+    width:15%;
 }
+.categories-homepage section:last-of-type{
+    display: flex;
+    flex-flow:row nowrap;
+}
+
+
+/* product detail */
+.product-detail-wrapper{
+    display:flex;
+    flex-flow:row-reverse nowrap;
+    justify-content: flex-end;
+}
+
+.product-detail-written{
+    display:flex;
+    flex-flow:row wrap;
+}
+.product-detail-written h2{
+    width:100%;
+}
+.product-detail-written div{
+    width:50%;
+}
+.product-detail-written p{
+    width:50%;
+}
+.product-detail-written h4, form h3{
+    width:100%;
+}
+
