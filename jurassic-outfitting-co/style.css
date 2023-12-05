@@ -148,6 +148,14 @@ footer{
 
 /* About */
 #who-we-are{
+    margin:0 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+#our-story{
+    margin:0 10%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -157,5 +165,6 @@ footer{
     flex-basis:46%;
 }
 .about-image{
+    margin:0;
     flex-basis:46%;
 }
