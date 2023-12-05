@@ -1,6 +1,9 @@
 /* every page */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color:#14183B;
 }
 body{
     background-color: #D7D3C6;
@@ -24,7 +27,8 @@ header{
     height: 100%;
     color: #14183B;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 40px;
+    font-weight: bold;
 }
 .site-nav h1{
     display: flex;
@@ -32,10 +36,15 @@ header{
     justify-content: center;
     height: 100%;
     border-bottom: 5px solid #14183B;
+    font-size: 40px;
 }
 .site-nav a:hover{
    border-bottom: 5px solid #14183B;
 }
+.site-nav a:active{
+    border-bottom: 5px solid #14183B;
+    background-color: #5B9676;
+ }
 footer{
     background-color: #B2A696;
 }
@@ -44,6 +53,13 @@ footer{
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+}
+.button{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    background-color: #5B9676;
+    text-decoration: none;
 }
  /* homepage */
 .homepage-banner{
@@ -80,21 +96,32 @@ footer{
     display: flex;
     flex-flow:column-reverse nowrap;
 }
-.categories-homepage section:last-of-type
-{
-    width:100%;
-}
 .categories-homepage section{
     width:15%;
 }
 .categories-homepage section:last-of-type{
+    width:100%;
     display: flex;
     flex-flow:row nowrap;
     justify-content: flex-end;
     border-top: 5px solid #14183B;
     border-bottom: 5px solid #14183B;
 }
-
+.customer-experiences{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.customer-experiences h2{
+    width: 100%;
+}
+.customer-experiences figure{
+    margin:0;
+    width:33%;
+    overflow: hidden;
+    border: 4vh solid transparent;
+    border-image: url(images/customer-experience-images/jp-border-image.png) 40 round;
+}
 /* product detail */
 .product-detail-wrapper{
     display:flex;
