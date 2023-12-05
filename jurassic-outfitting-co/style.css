@@ -54,13 +54,36 @@ footer{
     flex-flow: row nowrap;
     justify-content: space-between;
 }
+.footer-wrapper section ul li{
+    list-style-type: none;
+    margin-bottom:4px;
+}
+.footer-wrapper section ul li a:link{
+    text-decoration: none;
+}
+.footer-wrapper section ul li a:hover{
+    text-decoration: underline;
+}
+.footer-wrapper section ul li a:active{
+    text-decoration: underline;
+    color:#5B9676;
+}
+.footer-wrapper section ul{
+    list-style-type: none;
+    padding-left:0;
+}
 .button{
     display:flex;
     flex-flow:column nowrap;
     justify-content: center;
     background-color: #5B9676;
     text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5vh;
+    padding: 4px;
+    margin: 4px 0 4px 20px; 
 }
+
  /* homepage */
 .homepage-banner{
     background-image: url(images/banner-images/homepage-image.jpg);
@@ -78,8 +101,15 @@ footer{
     padding: 20px;
     max-width: 650px;
 }
+.homepage-banner div h2{
+    margin-bottom:0;
+}
+.homepage-banner div p{
+    font-size: 1.25em;
+}
 .homepage-banner div a{
     margin:auto;
+    padding:10px;
 }
 .categories-homepage, .customer-experiences{
     margin:0 10%;
@@ -95,6 +125,9 @@ footer{
 .categories-homepage section a{
     display: flex;
     flex-flow:column-reverse nowrap;
+}
+.categories-homepage section a h3 {
+    align-self:center;
 }
 .categories-homepage section{
     width:15%;
@@ -139,6 +172,9 @@ footer{
 .product-detail-written div{
     width:50%;
 }
+.checked{
+    color:#EEB01F;
+}
 .product-detail-written p{
     width:50%;
 }
@@ -166,5 +202,31 @@ footer{
 }
 .about-image{
     margin:0;
+    overflow: hidden;
     flex-basis:46%;
+}
+
+/* expedition detail */
+.expedition-banner{
+    background-image: url(images/banner-images/homepage-image.jpg);
+    background-size: cover;
+    background-position-y: center;
+    height:60vh;
+    display: flex;
+}
+.expedition-banner div{
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    margin: auto ;
+    background-color: #C4C896;
+    padding: 20px;
+    max-width: 650px;
+}
+.expedition-banner div h2{
+    width: 100%;
+    margin-bottom:0;
+}
+.expedition-banner div p{
+    font-size: 1.25em;
 }
