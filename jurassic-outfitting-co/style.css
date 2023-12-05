@@ -10,16 +10,31 @@ header{
     background-color: #B2A696;
 }
 .site-nav{
+    height:15vh;
     margin:0 10% 0 10%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
-header nav a{
+.site-nav a{
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    height: 100%;
     color: #14183B;
     text-decoration: none;
     font-size: 3em;
+}
+.site-nav h1{
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    height: 100%;
+    border-bottom: 5px solid #14183B;
+}
+.site-nav a:hover{
+   border-bottom: 5px solid #14183B;
 }
 footer{
     background-color: #B2A696;
@@ -34,7 +49,8 @@ footer{
 .homepage-banner{
     background-image: url(images/banner-images/homepage-image.jpg);
     background-size: cover;
-    height:40vh;
+    background-position-y: center;
+    height:60vh;
     display: flex;
 }
 .homepage-banner div{
@@ -74,6 +90,9 @@ footer{
 .categories-homepage section:last-of-type{
     display: flex;
     flex-flow:row nowrap;
+    justify-content: flex-end;
+    border-top: 5px solid #14183B;
+    border-bottom: 5px solid #14183B;
 }
 
 /* product detail */
