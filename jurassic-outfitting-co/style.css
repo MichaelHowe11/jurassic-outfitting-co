@@ -145,3 +145,17 @@ footer{
 .product-detail-written h4, form h3{
     width:100%;
 }
+
+/* About */
+#who-we-are{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+.about-written{
+    flex-basis:46%;
+}
+.about-image{
+    flex-basis:46%;
+}
