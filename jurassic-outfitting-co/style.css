@@ -71,12 +71,10 @@ footer{
 .categories-homepage section{
     width:15%;
 }
-<<<<<<< HEAD
 .categories-homepage section:last-of-type{
     display: flex;
     flex-flow:row nowrap;
 }
-
 
 /* product detail */
 .product-detail-wrapper{
@@ -101,10 +99,3 @@ footer{
 .product-detail-written h4, form h3{
     width:100%;
 }
-
-=======
-
-.productimg img {
-    width: 10%;
-}
->>>>>>> f0d060b77b89d44176cf53b49b38b37829b48484
