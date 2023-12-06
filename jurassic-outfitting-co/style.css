@@ -258,10 +258,9 @@ fieldset{
     display:flex;
     flex-flow:column-reverse nowrap;
     border:none;
-}
-.expedition-detail-wrapper section form fieldset{
     background-color: #C4C896;
     border-radius: 1vh;
+    width: 20%;
 }
 select[name="Size"],select[name="Gender"]  {
     background-color: #F8F8F0;
