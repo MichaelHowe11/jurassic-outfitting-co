@@ -263,12 +263,13 @@ fieldset{
     min-width: 0;
     display:flex;
     flex-flow:column-reverse nowrap;
-    border:none;
     background-color: #C4C896;
     border-radius: 1vh;
     width: 22%;
     margin-right: 2%;
     margin-bottom: 20px;
+    border: solid #14183B;
+
 }
 select[name="Size"],select[name="Gender"]  {
     background-color: #F8F8F0;
@@ -278,16 +279,29 @@ select[name="Size"],select[name="Gender"]  {
     display: flex;
     justify-content: space-around;
 }
-fieldset img{
+.exp-detail-stars-and-price {
     order: 2;
+    margin-left: 7%;
+}
+.exp-detail-stars-and-price p {
+    margin-top:  0.5em;
+    margin-bottom:  0.5em;
+}
+.exp-detail-stars-and-price div {
+    margin-top:  0.5em;
+    margin-bottom:  0.75em;
+}
+fieldset img{
+    order: 4;
     border-radius: 1vh;
 }
 legend{
     display: none;
 }
 .expedition-detail-items fieldset h4{
-    order: 1;
+    order: 4;
     align-self: center;
+    margin-bottom: 0.5em;
 }
 select{
     font-size: 1em;
