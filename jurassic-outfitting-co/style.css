@@ -83,7 +83,18 @@ footer{
     padding: 4px;
     margin: 4px 0 4px 20px; 
 }
-
+.add-to-cart{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    background-color: #5B9676;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:1.5em;
+    border-radius: 1vh;
+    padding: 10px;
+    margin: 4px 0 4px 20px; 
+}
  /* homepage */
 .homepage-banner{
     background-image: url(images/banner-images/homepage-image.jpg);
@@ -100,6 +111,7 @@ footer{
     background-color: #C4C896;
     padding: 20px;
     max-width: 650px;
+    border-radius: 2vh;
 }
 .homepage-banner div h2{
     margin-bottom:0;
@@ -125,6 +137,9 @@ footer{
 .categories-homepage section a{
     display: flex;
     flex-flow:column-reverse nowrap;
+}
+.categories-homepage section a img{
+    border-radius: 1vh;;
 }
 .categories-homepage section a h3 {
     align-self:center;
@@ -207,11 +222,14 @@ footer{
 }
 
 /* expedition detail */
+.expedition-detail-wrapper section{
+    margin:0 10%;
+}
 .expedition-banner{
     background-image: url(images/banner-images/homepage-image.jpg);
     background-size: cover;
     background-position-y: center;
-    height:60vh;
+    height:50vh;
     display: flex;
 }
 .expedition-banner div{
@@ -222,6 +240,7 @@ footer{
     background-color: #C4C896;
     padding: 20px;
     max-width: 650px;
+    border-radius: 2vh;
 }
 .expedition-banner div h2{
     width: 100%;
@@ -229,4 +248,43 @@ footer{
 }
 .expedition-banner div p{
     font-size: 1.25em;
+}
+.expedition-detail-items{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+fieldset{
+    display:flex;
+    flex-flow:column-reverse nowrap;
+    border:none;
+}
+.expedition-detail-wrapper section form fieldset{
+    background-color: #C4C896;
+    border-radius: 1vh;
+}
+select[name="Size"],select[name="Gender"]  {
+    background-color: #F8F8F0;
+    width: 35%;
+  }
+.expedition-detail-dropdowns{
+    display: flex;
+    justify-content: space-around;
+}
+fieldset img{
+    order: 2;
+    border-radius: 1vh;
+}
+legend{
+    display: none;
+}
+.expedition-detail-items fieldset h4{
+    order: 1;
+    align-self: center;
+}
+select{
+    font-size: 1em;
+}
+option{
+    text-align: center;
 }

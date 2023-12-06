@@ -20,72 +20,80 @@
             <a href="../shopping-cart.html"><img src="../images/header-images/shopping-cart.svg" alt="shopping cart"></a>
         </nav>
     </header>
-    <main>
+    <main class="expedition-detail-wrapper">
         <section class="expedition-banner">
             <div>
                 <h2>Package Name</h2>
-                <p>descrip</p>
+                <p>Description (Take from "expedition-packages.html" for each package)</p>
             </div>
         </section>
         <section>
             <h3>Package Items</h3>
-            <form>
+            <form class="expedition-detail-items">
                 <fieldset>
-                    <legend>Item Name</legend>
-                    <select name="Gender">
-                        <option value="Men's">Men's</option>
-                        <option value="Women's">Women's</option>
-                        <option value="Boys'">Boys'</option>
-                        <option value="Girls'">Girls'</option>
-                        <option value="Toddlers'">Toddlers'</option>
-                    </select>
-                    <select name="Size">
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                    <img src="" alt="">
+                    <legend>Outdoor Jacket - Men's</legend>
+                    <h4>Outdoor Jacket - Men's (Fill in Both)</h4>
+                    <div class="expedition-detail-dropdowns">
+                        <select name="Gender">
+                            <optgroup>
+                                <option value="Men's">Men's</option>
+                                <option value="Women's">Women's</option>
+                                <option value="Boys'">Boys'</option>
+                                <option value="Girls'">Girls'</option>
+                                <option value="Toddlers'">Toddlers'</option>
+                            </optgroup>
+                        </select>
+                        <select name="Size">
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                        </select>
+                    </div>
+                    <img src="../images/product-detail-images/clothing/outdoor-jacket-mens.jpg" alt="photo of a men's outdoor jacket">
                 </fieldset>
-                <input type="submit" value="Add to Cart">
+                
+                <input class="add-to-cart" type="submit" value="Add to Cart">
             </form>
         </section>
     </main>
     <footer>
-        <section>
-            <h4>Contact Us</h4>
-            <address>
+        <div class="footer-wrapper">
+            <section>
+                <h5>Contact Us</h5>
+                <address>
+                    <ul>
+                        <li><a href="tel:+506-755-562-41">506-755-562-41</a></li>
+                        <li><a href="mailto:jurassicoutfitting@gmail.com">Send email</a></li>
+                    </ul>
+                </address>
+            </section>
+            <section>
+                <h5>About</h5>
                 <ul>
-                    <li><a href="tel:+506-755-562-41">506-755-562-41</a></li>
-                    <li><a href="mailto:jurassicoutfitting@gmail.com">Send email</a></li>
+                    <li><a href="about.html#who-we-are">Who we are</a></li>
+                    <li><a href="about.html#our-story">Our Story</a></li>
+                    <li><a href="about.html#founders">Founders</a></li>
                 </ul>
-            </address>
-        </section>
-        <section>
-            <h4>About</h4>
-            <ul>
-                <li><a href="about.html#who-we-are">Who we are</a></li>
-                <li><a href="about.html#our-story">Our Story</a></li>
-                <li><a href="about.html#founders">Founders</a></li>
-            </ul>
-        </section>
-        <section>
-            <h4>Products</h4>
-            <ul>
-                <li><a href="product-categories/all-products.html">All Products</a></li>
-                <li><a href="product-categories/expedition-wear.html">Expedition Wear</a></li>
-                <li><a href="product-categories/equipment.html">Equipment</a></li>
-                <li><a href="product-categories/electronics.html">Electronics</a></li>
-                <li><a href="product-categories/protection.html">Protection</a></li>
-            </ul>
-        </section>
-        <section>
-            <h4>Expedition Packages</h4>
-            <ul>
-                <li><a href="expedition-packages.html#premium-packages">Premium Packages</a></li>
-                <li><a href="expedition-packages.html#basic-packages">Basic Packages</a></li>
-                <li><a href="expedition-packages.html#mega-premium-package">Mega Premium Package</a></li>
-            </ul>
-        </section>
+            </section>
+            <section>
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="product-categories/all-products.html">All Products</a></li>
+                    <li><a href="product-categories/expedition-wear.html">Expedition Wear</a></li>
+                    <li><a href="product-categories/equipment.html">Equipment</a></li>
+                    <li><a href="product-categories/electronics.html">Electronics</a></li>
+                    <li><a href="product-categories/protection.html">Protection</a></li>
+                </ul>
+            </section>
+            <section>
+                <h5>Expedition Packages</h5>
+                <ul>
+                    <li><a href="expedition-packages.html#premium-packages">Premium Packages</a></li>
+                    <li><a href="expedition-packages.html#basic-packages">Basic Packages</a></li>
+                    <li><a href="expedition-packages.html#mega-premium-package">Mega Premium Package</a></li>
+                </ul>
+            </section>
+        </div>
     </footer>
 </body>
 
