@@ -1,6 +1,9 @@
 /* every page */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color:#14183B;
 }
 body{
     background-color: #D7D3C6;
@@ -24,7 +27,8 @@ header{
     height: 100%;
     color: #14183B;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 40px;
+    font-weight: bold;
 }
 .site-nav h1{
     display: flex;
@@ -32,10 +36,15 @@ header{
     justify-content: center;
     height: 100%;
     border-bottom: 5px solid #14183B;
+    font-size: 40px;
 }
 .site-nav a:hover{
    border-bottom: 5px solid #14183B;
 }
+.site-nav a:active{
+    border-bottom: 5px solid #14183B;
+    background-color: #5B9676;
+ }
 footer{
     background-color: #B2A696;
 }
@@ -44,6 +53,35 @@ footer{
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+}
+.footer-wrapper section ul li{
+    list-style-type: none;
+    margin-bottom:4px;
+}
+.footer-wrapper section ul li a:link{
+    text-decoration: none;
+}
+.footer-wrapper section ul li a:hover{
+    text-decoration: underline;
+}
+.footer-wrapper section ul li a:active{
+    text-decoration: underline;
+    color:#5B9676;
+}
+.footer-wrapper section ul{
+    list-style-type: none;
+    padding-left:0;
+}
+.button{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    background-color: #5B9676;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5vh;
+    padding: 4px;
+    margin: 4px 0 4px 20px; 
 }
 
  /* homepage */
@@ -63,8 +101,15 @@ footer{
     padding: 20px;
     max-width: 650px;
 }
+.homepage-banner div h2{
+    margin-bottom:0;
+}
+.homepage-banner div p{
+    font-size: 1.25em;
+}
 .homepage-banner div a{
     margin:auto;
+    padding:10px;
 }
 .categories-homepage, .customer-experiences{
     margin:0 10%;
@@ -81,21 +126,35 @@ footer{
     display: flex;
     flex-flow:column-reverse nowrap;
 }
-.categories-homepage section:last-of-type
-{
-    width:100%;
+.categories-homepage section a h3 {
+    align-self:center;
 }
 .categories-homepage section{
     width:15%;
 }
 .categories-homepage section:last-of-type{
+    width:100%;
     display: flex;
     flex-flow:row nowrap;
     justify-content: flex-end;
     border-top: 5px solid #14183B;
     border-bottom: 5px solid #14183B;
 }
-
+.customer-experiences{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.customer-experiences h2{
+    width: 100%;
+}
+.customer-experiences figure{
+    margin:0;
+    width:33%;
+    overflow: hidden;
+    border: 4vh solid transparent;
+    border-image: url(images/customer-experience-images/jp-border-image.png) 40 round;
+}
 /* product detail */
 .product-detail-wrapper{
     display:flex;
@@ -113,6 +172,9 @@ footer{
 .product-detail-written div{
     width:50%;
 }
+.checked{
+    color:#EEB01F;
+}
 .product-detail-written p{
     width:50%;
 }
@@ -120,19 +182,51 @@ footer{
     width:100%;
 }
 
-p,h2,h3 {
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-.aboutwrap {
+/* About */
+#who-we-are{
+    margin:0 10%;
     display: flex;
-    flex-flow: column;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+#our-story{
+    margin:0 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+.about-written{
+    flex-basis:46%;
+}
+.about-image{
+    margin:0;
+    overflow: hidden;
+    flex-basis:46%;
 }
 
-section > section,
-section > figure {
-    width: 40%;
-    display: inline-block;
-    vertical-align: top;
+/* expedition detail */
+.expedition-banner{
+    background-image: url(images/banner-images/homepage-image.jpg);
+    background-size: cover;
+    background-position-y: center;
+    height:60vh;
+    display: flex;
+}
+.expedition-banner div{
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    margin: auto ;
+    background-color: #C4C896;
+    padding: 20px;
+    max-width: 650px;
+}
+.expedition-banner div h2{
+    width: 100%;
+    margin-bottom:0;
+}
+.expedition-banner div p{
+    font-size: 1.25em;
 }
