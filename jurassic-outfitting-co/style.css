@@ -72,6 +72,9 @@ footer{
     list-style-type: none;
     padding-left:0;
 }
+h5{
+    font-size:16px;
+}
 .button{
     display:flex;
     flex-flow:column nowrap;
@@ -198,31 +201,31 @@ footer{
 }
 
 /* About */
-.about-wrapper section{
-    margin:0 10%;
-}
 #who-we-are{
-    margin:0 10%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    padding: 10px 0;
+    border-bottom: solid #14183B;
+    margin:0 10%;
 }
 #our-story{
-    margin:0 10%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    border-bottom: solid #14183B;
+    padding: 10px 0;
+    margin:0 10%;
 }
 .about-written{
-    flex-basis:46%;
-    font-size: 1.25em;;
+    width: 46%;
+    font-size: 1.25em;
 }
+
 .about-image{
-    margin:0;
-    width:46%;
-    overflow: hidden;
+    width: 46%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* expedition detail */
