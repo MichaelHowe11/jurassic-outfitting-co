@@ -139,7 +139,7 @@ h5{
     padding:10px;
 }
 .categories-homepage, .customer-experiences{
-    margin:0 10%;
+    margin: 0 14%;
 }
 .categories-homepage{
     display: flex;
@@ -187,10 +187,12 @@ h5{
 }
 .customer-experiences h2{
     width: 100%;
+    height: 100%;
 }
 .customer-experiences figure{
     margin:0;
     width:33%;
+    height: 53%;
     overflow: hidden;
     border: 4vh solid transparent;
     border-image: url(images/customer-experience-images/jp-border-image.png) 40 round;
@@ -502,6 +504,7 @@ option{
 }
 .premium-packages-image{
     width: 46%;
+    height: 46%;
     margin:15px 0;
 }
 #basic-packages{
@@ -583,4 +586,96 @@ option{
     border: solid #5B9676;
     background-color: #236154;
     color: #F8F8F0;
+}
+
+@media only screen and (max-width:1100px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .site-nav {
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .site-nav h1 {
+        border-bottom: none;
+    }
+    
+    .expedition-packages-wrapper,
+    #premium-packages section,
+    #basic-packages,
+    #basic-packages section,
+    #mega-premium-package section {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .premium-package-wrapper,
+    .basic-package-wrapper,
+    .mega-premium-banner>div {
+        width: 100%;
+    }
+    
+    .premium-packages-written,
+    .basic-package-written,
+    .mega-premium-banner div {
+        width: 100%;
+    }
+    
+    .premium-packages-image,
+    .basic-package-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .footer-wrapper {
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+    }
+    
+    @media only screen and (max-width: 1100px) {
+        .site-nav {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+    
+        .site-nav a {
+            font-size: 24px;
+        }
+    
+        .categories-homepage section {
+            width: 48%;
+        }
+    
+        .footer-wrapper {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+    
+        .premium-package-wrapper,
+        .basic-package-wrapper,
+        .mega-premium-banner {
+            flex-flow: column nowrap;
+        }
+    
+        .premium-packages-written,
+        .basic-packagse-written,
+        .mega-packages-buy {
+            padding: 15px;
+        }
+
+        .customer-experiences figure {
+            height: 50%;
+            width: 100%;
+        }
+
+        .customer-experiences img {
+            width: 100%;
+            height: 30%;
+        }
+
+    }
 }
