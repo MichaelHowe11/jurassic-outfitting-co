@@ -58,6 +58,9 @@ footer{
     list-style-type: none;
     margin-bottom:4px;
 }
+.footer-wrapper section ul li a{
+    font-size: 15px;
+}
 .footer-wrapper section ul li a:link{
     text-decoration: none;
 }
@@ -85,6 +88,15 @@ h5{
     border-radius: 0.5vh;
     padding: 4px;
     margin: 4px 0 4px 20px; 
+}
+.button:hover{
+    border: solid #5B9676;
+    background-color: #7dc69e;
+}
+.button:active{
+    border: solid #5B9676;
+    background-color: #236154;
+    color: #F8F8F0;
 }
 .addToCart{
     display:flex;
@@ -146,6 +158,16 @@ h5{
 }
 .categories-homepage section a h3 {
     align-self:center;
+}
+.categories-homepage section a:link{
+    text-decoration: none;
+}
+.categories-homepage section a:hover{
+    text-decoration: underline;
+}
+.categories-homepage section a h3:active{
+    text-decoration: underline;
+    color:#5B9676;
 }
 .categories-homepage section{
     width:15%;
@@ -361,7 +383,7 @@ option{
 }
 /* Product Categories */
 .prod-category-header{
-    margin:0 10%;
+    margin:15px 23%;
 }
 .product-categories-wrapper{
     margin: 0 10%;
@@ -438,7 +460,7 @@ option{
 .terms-of-service-wrapper{
     margin: 0 10%;
 }
-.terms-of-service-wrapper section,h2{
+.terms-of-service-wrapper section{
     max-width: 60%;
 }
 .terms-of-service-wrapper section ul li{
@@ -452,6 +474,113 @@ option{
 .expedition-packages-wrapper{
     margin: 0 10%;
 }
-#premium-packages{
+#premium-packages section{
+    background-color: #C4C896;
+    margin-bottom: 30px;
+}
+.premium-package-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 15px 15px 15px 15px;
+}
+.premium-packages-written{
+    width: 46%;
+}
+.premium-packages-written p,a{
+    font-size: 1.15em;
+}
+.premium-packages-buy{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.premium-packages-buy a{
+    align-self: center;
+    padding: 10px 20px;
+}
+.premium-packages-image{
+    width: 46%;
+    margin:15px 0;
+}
+#basic-packages{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#basic-packages h2,.line-break{
+    width: 100%;
+}
+#basic-packages section{
+    width: 46%;
+    background-color: #C4C896;
+    margin-bottom: 30px;
+}
+.basic-package-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 15px 15px 15px 15px;
+}
+.basic-package-wrapper img{
+    order:0;
+}
+.basic-package-written{
+    order:1;
+}
+.basic-packages-buy{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-weight: bold;
+}
 
+.basic-packages-buy a{
+    align-self: center;
+    padding: 10px 20px;
+}
+.expedition-packages-wrapper h2{
+    margin-bottom:4px;
+}
+.line-break{
+    border-bottom: solid #14183B;
+    margin-bottom:20px;
+}
+.mega-premium-banner{
+    background-image: url(images/expedition-images/hunting-dinosaurs-images.jpeg);
+    background-size: cover;
+    background-position-y: center;
+    height:80vh;
+    border-radius: 1vh;
+    display: flex;
+}
+.mega-premium-banner>div{
+    width: 50%;
+    margin: auto;
+    background-color: #C4C896;
+    padding: 20px;
+    max-width: 650px;
+    border-radius: 2vh;
+}
+.mega-premium-banner div p,a{
+    font-size: 1.15em;
+}
+.mega-packages-buy{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.mega-packages-buy a{
+    align-self: center;
+    padding: 10px 20px;
+}
+.mega-packages-buy a:hover{
+    border: solid #5B9676;
+    background-color: #7dc69e;
+}
+.mega-packages-buy a:active{
+    border: solid #5B9676;
+    background-color: #236154;
+    color: #F8F8F0;
 }
