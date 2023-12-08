@@ -228,6 +228,16 @@ h5{
     object-position: center;
 }
 
+#founders{
+    margin: 0 10%;
+    display: flex;
+    flex-flow: row wrap;
+}
+#founders section{
+    display: flex;
+    flex-flow:  wrap;
+}
+
 /* expedition detail */
 .expedition-detail-wrapper section{
     margin:0 10%;
