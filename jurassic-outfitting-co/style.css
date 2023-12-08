@@ -110,6 +110,24 @@ h5{
     padding: 10px;
     margin: 4px 0 4px 20px; 
 }
+.addToCart:hover{
+    border: solid #5B9676;
+    background-color: #7dc69e;
+}
+.addToCart:active{
+    border: solid #5B9676;
+    background-color: #236154;
+    color: #F8F8F0;
+}
+.prodPrice::before {
+    background-image: url(images/product-detail-images/JurassicPAY-logo.png);
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    background-size: cover;
+    content: '';
+    transform: translateY(25%);
+}
  /* homepage */
 .homepage-banner{
     background-image: url(images/banner-images/homepage-image.jpg);
@@ -201,7 +219,8 @@ h5{
 .product-detail-wrapper{
     display:flex;
     flex-flow:row-reverse nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin: 0 20%;
 }
 
 .product-detail-written{
@@ -211,8 +230,50 @@ h5{
 .product-detail-written h2{
     width:100%;
 }
-.product-detail-written div{
-    width:50%;
+.product-detail-written h4{
+    margin-bottom: 0;
+}
+.product-detail-written ul{
+    margin-top: 0;
+}
+.prod-detail-buy{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-weight: bold;
+    width: 100%;
+}
+.prod-detail-buy div{
+    align-self: center;
+}
+.product-detail-written form{
+    width: 100%;
+}
+.size-buttons{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.size-button{
+    width: 30%;
+}
+.size-button{
+    background-color: #5B9676;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5vh;
+    padding: 4px;
+    margin: 4px 0 4px 20px; 
+}
+.size-button:hover{
+    border: solid #5B9676;
+    background-color: #7dc69e;
+}
+.size-button.active{
+    border: solid #5B9676;
+    background-color: #236154;
+    color: #F8F8F0;
 }
 .checked{
     color:#EEB01F;
@@ -290,7 +351,10 @@ h5{
 .founder-card-wrapper img {
     display: flex;
     align-self: center;
-    width: 40%;
+    width: 100%;
+    height:70vh;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* expedition detail */
@@ -511,7 +575,8 @@ option{
 }
 .premium-packages-image{
     width: 46%;
-    height: 46%;
+    max-height:30vh;
+    object-fit: cover;
     margin:15px 0;
 }
 #basic-packages{
@@ -597,7 +662,7 @@ option{
 /* shopping cart */
 
 
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width:640px) {
     body {
         font-size: 14px;
     }
