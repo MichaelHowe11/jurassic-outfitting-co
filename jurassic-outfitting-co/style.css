@@ -232,12 +232,36 @@ h5{
     margin: 0 10%;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
+}
+#founders h2{
+    width: 100%;
 }
 #founders section{
-    display: flex;
-    flex-flow:  wrap;
+    width: 46%;
+    background-color: #C4C896;
+    box-shadow: 5px 10px #436771;
+    border-radius: 1vh;
+    margin-bottom: 20px;
 }
-
+.founder-card-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 15px 15px 15px 15px;
+}
+.founder-card-wrapper h3{
+    align-self: center;
+}
+.founder-card-wrapper address a:link{
+    text-decoration: none;
+}
+.founder-card-wrapper address a:hover{
+    text-decoration: underline;
+}
+.founder-card-wrapper address a:active{
+    text-decoration: underline;
+    color:#5B9676;
+}
 /* expedition detail */
 .expedition-detail-wrapper section{
     margin:0 10%;
@@ -405,10 +429,29 @@ option{
 .product-card-categories p{
     order:2;
 }
-.product-card-categories div{
-
-}
 .product-card-categories img{
     order:4;
     border-radius: 1vh;
+}
+
+/* terms of service */
+.terms-of-service-wrapper{
+    margin: 0 10%;
+}
+.terms-of-service-wrapper section,h2{
+    max-width: 60%;
+}
+.terms-of-service-wrapper section ul li{
+    list-style-type: square;
+}
+.terms-of-service-wrapper section ul li::marker{
+    color: #5B9676;
+}
+
+/* expedition packages */
+.expedition-packages-wrapper{
+    margin: 0 10%;
+}
+#premium-packages{
+
 }
