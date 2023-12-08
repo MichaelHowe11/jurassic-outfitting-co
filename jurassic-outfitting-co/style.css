@@ -286,6 +286,13 @@ h5{
     text-decoration: underline;
     color:#5B9676;
 }
+
+.founder-card-wrapper img {
+    display: flex;
+    align-self: center;
+    width: 40%;
+}
+
 /* expedition detail */
 .expedition-detail-wrapper section{
     margin:0 10%;
