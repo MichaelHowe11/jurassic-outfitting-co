@@ -21,26 +21,31 @@
                     alt="shopping cart"></a>
         </nav>
     </header>
-    <main class="product-detail-wrapper">
+
+    <main class="product-detail-wrapper product">
         <section class="product-detail-written">
-            <h2>Outdoor Jacket - Toddlers'</h2>
-            <div>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
+            <h2 class="prodName">Outdoor Jacket - Toddlers'</h2>
+            <div class="prod-detail-buy">
+                <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="prodPrice">79.99</p>
             </div>
-            <p class="prodPrice">79.99</p>
             <form>
                 <h3>Select a size</h3>
-                <input type="button" value="S">
-                <input type="button" value="M">
-                <input type="button" value="L">
-                <input type="submit" value="Add to cart">
+                <div class="size-buttons">
+                    <input class="size-button" type="button" value="Small">
+                    <input class="size-button" type="button" value="Medium">
+                    <input class="size-button" type="button" value="Large">
+                </div>
+                <input class="addToCart" type="submit" value="Add to Cart">
             </form>
             <h4>Features</h4>
-            <ul>
+            <ul class="prodDesc">
                 <li>Crafted with easy-to-use zippers and snaps for hassle-free dressing and undressing.</li>
                 <li>Soft, cozy fabric provides warmth and comfort for the youngest members of your expedition.</li>
                 <li>Adorable dinosaur-themed prints add a touch of whimsy to keep toddlers excited about their outdoor
@@ -48,11 +53,12 @@
             </ul>
         </section>
         <figure>
-            <img src="../images/product-detail-images/clothing/outdoor-jacket-toddlers.jpg" alt="photo of a toddlers' outdoor jacket" class="productimg">
+            <img class="prodImage" src="../images/product-detail-images/clothing/outdoor-jacket-toddlers.jpg" alt="photo of a toddlers' outdoor jacket">
         </figure>
     </main>
 
-    <footer>
+
+    <footer class="product-detail-footer">
         <div class="footer-wrapper">
             <section>
                 <h4>Contact Us</h4>

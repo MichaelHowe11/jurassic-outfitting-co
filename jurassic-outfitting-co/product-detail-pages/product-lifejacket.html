@@ -21,35 +21,42 @@
                     alt="shopping cart"></a>
         </nav>
     </header>
+
     <main class="product-detail-wrapper">
         <section class="product-detail-written">
-            <h2>Life Jacket</h2>
-            <div>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
+            <h2 class="prodName">Life Jacket</h2>
+            <div class="prod-detail-buy">
+                <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="prodPrice">39.99(rent)</p>
             </div>
-            <p class="prodPrice">39.99(rent)</p>
             <form>
                 <h3>Select a size</h3>
-                <input type="button" value="S">
-                <input type="button" value="M">
-                <input type="button" value="L">
-                <input type="submit" value="Add to cart">
+                <div class="size-buttons">
+                    <input class="size-button" type="button" value="Small">
+                    <input class="size-button" type="button" value="Medium">
+                    <input class="size-button" type="button" value="Large">
+                </div>
+                <input class="addToCart" type="submit" value="Add to Cart">
             </form>
             <h4>Features</h4>
-            <ul>
+            <ul class="prodDesc">
                 <li>Safety-approved life jacket for water-based activities in Jurassic Park.</li>
                 <li>Adjustable straps for a secure and comfortable fit.</li>
                 <li>Bright colors for increased visibility in the park's aquatic environments.</li>
             </ul>
         </section>
         <figure>
-            <img src="../images/product-detail-images/equipment/life-jacket.jpg" alt="Photo of a life jacket" class="productimg">
+            <img class="prodImage" src="../images/product-detail-images/equipment/life-jacket.jpg" alt="Photo of a life jacket">
         </figure>
     </main>
+
+    
 
 
 

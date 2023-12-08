@@ -20,57 +20,39 @@
                         alt="shopping cart"></a></h1>
         </nav>
     </header>
-    <main>
-        <details>
-            <summary>Order Summary</summary>
-            <dl>
-                <dt>Total Items</dt>
-                <dd>#</dd>
+    <main class="shopping-cart-wrapper">
+        <h2>Your Cart</h2>
+        
+        <div id="cart">
 
-                <dt>Subtotal</dt>
-                <dd>#</dd>
+            
 
-                <dt>Taxes</dt>
-                <dd>#</dd>
+        </div>
 
-                <dt>Order Total</dt>
-                <dd><strong>#</strong></dd>
-            </dl>
-        </details>
-        <details>
-            <summary>Checkout</summary>
-            <form>
-                <label>Phone Number</label>
-                <input type="text">
 
-                <label>Email</label>
-                <input type="text">
-
-                <label>Full name</label>
-                <input type="text">
-
-                <label><a href="terms-of-service.html">Terms of Service</a></label>
-                <input type="checkbox">
-
-                <input type="submit" value="JurassicPAY">
-            </form>
-        </details>
-        <section>
-            <h3>Product name</h3>
-            <img src="" alt="">
-            <p>price</p>
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <form>
-                <label for="remove-button">Remove</label>
-                <input id="remove-button" type="submit">
-            </form>
-        </section>
+        <div class="checkout-dropdowns">
+            <details>
+                <summary>Order Summary</summary>
+                <dl>
+                    <dt>Order Total</dt>
+                    <dd><strong>#</strong></dd>
+                </dl>
+            </details>
+            <details>
+                <summary>Checkout</summary>
+                <form>
+                    <label>Phone Number</label>
+                    <input type="text">
+                    <label>Email</label>
+                    <input type="text">
+                    <label>Full name</label>
+                    <input type="text">
+                    <label><a href="terms-of-service.html">Terms of Service</a></label>
+                    <input type="checkbox">
+                    <input type="submit" value="JurassicPAY">
+                </form>
+            </details>
+        </div>
     </main>
     <footer>
         <div class="footer-wrapper">

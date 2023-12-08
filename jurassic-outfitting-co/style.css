@@ -246,6 +246,11 @@ h5{
 .prod-detail-buy div{
     align-self: center;
 }
+.prod-detail-buy p{
+    padding-bottom: 11px;
+    margin: 0;
+    align-self: center;
+}
 .product-detail-written form{
     width: 100%;
 }
@@ -253,10 +258,10 @@ h5{
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .size-button{
-    width: 30%;
+    width: 25%;
 }
 .size-button{
     background-color: #5B9676;
@@ -284,7 +289,9 @@ h5{
 .product-detail-written h4, form h3{
     width:100%;
 }
-
+.product-detail-footer{
+    margin-top:20vh;
+}
 /* About */
 #who-we-are{
     display: flex;
@@ -660,6 +667,9 @@ option{
     color: #F8F8F0;
 }
 /* shopping cart */
+.shopping-cart-wrapper{
+    margin: 0 10%;
+}
 
 
 @media only screen and (max-width:640px) {
