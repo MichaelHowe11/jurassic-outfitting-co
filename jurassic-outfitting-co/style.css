@@ -204,7 +204,6 @@ h5{
 }
 .customer-experiences h2{
     width: 100%;
-    height: 100%;
 }
 .customer-experiences figure{
     margin:0;
@@ -236,6 +235,12 @@ h5{
 }
 .product-detail-written ul{
     margin-top: 0;
+}
+.product-detail-written ul li{
+    list-style-type: square;
+}
+.product-detail-written ul li::marker{
+    color: #5B9676;
 }
 .prod-detail-buy{
     display: flex;
@@ -407,6 +412,7 @@ fieldset{
     min-width: 0;
     display:flex;
     flex-flow:column-reverse nowrap;
+    justify-content: flex-end;
     background-color: #C4C896;
     border-radius: 1vh;
     width: 22%;
@@ -417,6 +423,7 @@ fieldset{
 }
 select[name="Size"],select[name="Gender"]  {
     background-color: #F8F8F0;
+    color: #14183B;
     width: 35%;
   }
 .expedition-detail-dropdowns{
@@ -446,6 +453,9 @@ legend{
     order: 4;
     align-self: center;
     margin-bottom: 0.5em;
+}
+.expedition-detail-items fieldset h4 a{
+    text-decoration: none;
 }
 select{
     font-size: 1em;
@@ -675,93 +685,285 @@ option{
 
 
 @media only screen and (max-width:640px) {
-    body {
-        font-size: 14px;
+    /* every page */
+    .button{
+        font-weight: bold;
+        border-radius: 0.5vh;
+        padding: 4px;
+        margin: 4px 0 4px 20px;
+        font-size: 16px; 
     }
-    
-    .site-nav {
+    /* homepage */
+    .homepage-banner{
+        background-position-x: center;
+        height:50vh;
+    }
+    .homepage-banner div{
+        width: 90%;
+        padding: 10px;
+        border-radius: 2vh;
+    }
+    .homepage-banner div h2{
+        font-size: 21px;
+    }
+    .homepage-banner div p{
+        font-size: 16px;
+    }
+    .homepage-banner div a{
+        margin:auto;
+        padding:10px;
+    }
+    .categories-homepage, .customer-experiences{
+        margin: 0 5%;
+    }
+    .categories-homepage h2{
+        font-size: 21px;
+    }
+    .categories-homepage section a h3 {
+        font-size: 18.83px;
+    }
+    .categories-homepage section{
+        width:46%;
+    }
+    .categories-homepage section:last-of-type{
+        flex-flow:row wrap;
+        justify-content: flex-start;
+    }
+    .categories-homepage section:last-of-type a{
+        padding: 10px;
+        margin-left: 0;
+    }
+    .customer-experiences{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .customer-experiences figure{
+        width:100%;
+    }
+    /* product detail */
+    .product-detail-wrapper{
+        flex-flow:column-reverse nowrap;
+        margin: 0 5%;
+    }
+    .product-detail-wrapper figure{
+        align-self: center;
+        width:100%;
+    }
+    .product-detail-wrapper figure img{
+        width: 100%;
+    }
+    .product-detail-written h2{
+        font-size: 21px;
+    }
+    .product-detail-written h3{
+        font-size: 18.83px; 
+    }
+    .product-detail-footer{
+        margin-top:0;
+    }
+    /* About */
+    #who-we-are{
         flex-flow: column nowrap;
-        align-items: center;
-        text-align: center;
+        margin:0 5%;
     }
-    
-    .site-nav h1 {
-        border-bottom: none;
-    }
-    
-    .expedition-packages-wrapper,
-    #premium-packages section,
-    #basic-packages,
-    #basic-packages section,
-    #mega-premium-package section {
-        width: 100%;
-        margin: 0;
-    }
-    
-    .premium-package-wrapper,
-    .basic-package-wrapper,
-    .mega-premium-banner>div {
-        width: 100%;
-    }
-    
-    .premium-packages-written,
-    .basic-package-written,
-    .mega-premium-banner div {
-        width: 100%;
-    }
-    
-    .premium-packages-image,
-    .basic-package-wrapper img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .footer-wrapper {
+    #our-story{
         flex-flow: column nowrap;
-        align-items: center;
-        text-align: center;
+        margin:0 5%;
     }
-    
-    @media only screen and (max-width: 1100px) {
-        .site-nav {
-            flex-flow: row nowrap;
-            justify-content: space-between;
-        }
-    
-        .site-nav a {
-            font-size: 24px;
-        }
-    
-        .categories-homepage section {
-            width: 48%;
-        }
-    
-        .footer-wrapper {
-            flex-flow: row nowrap;
-            justify-content: space-between;
-        }
-    
-        .premium-package-wrapper,
-        .basic-package-wrapper,
-        .mega-premium-banner {
-            flex-flow: column nowrap;
-        }
-    
-        .premium-packages-written,
-        .basic-packagse-written,
-        .mega-packages-buy {
-            padding: 15px;
-        }
+    .about-written{
+        width: 100%;
+    }
+    .about-written h2{
+        font-size: 21px;
+    }
+    .about-written p{
+        font-size: 16px;
+    }
+    .about-image{
+        width: 100%;
+    }
+    #founders{
+        margin: 0 5%;
+        flex-flow: row wrap;
+    }
+    #founders h2{
+        font-size: 21px;
+    }
+    #founders section{
+        width: 100%;
+    }
+    .founder-card-wrapper h3{
+        font-size: 18.83px
+    }
+    /* expedition detail */
+    .expedition-detail-wrapper section{
+        margin:0 5%;
+    }
+    .expedition-banner{
+        background-position-x: center;
+    }
+    .expedition-banner div{
+        width: 90%;
+    }
+    .expedition-banner div h2{
+        font-size: 21px;
+    }
+    .expedition-banner div p{
+        font-size: 16px;
+    }
+    .expedition-detail-wrapper section h3{
+        font-size: 18.83px
+    }
+    fieldset{
+        width: 46%;
+        justify-content: flex-end;
+    }
+    fieldset h4 a{
+        font-size: 16px;
+    }
+    select[name="Size"],select[name="Gender"]  {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+    .expedition-detail-dropdowns{
+        flex-flow: column nowrap;
+    }
+    .exp-detail-stars-and-price {
+        order: 2;
+        margin-left: 0;
+    }
+    .exp-detail-stars-and-price p {
+        margin:0;
+    }
+    /* terms of service */
+    .terms-of-service-wrapper{
+        margin: 0 5%;
+    }
+    .terms-of-service-wrapper h2{
+        font-size: 21px;
+    }
+    .terms-of-service-wrapper section{
+        max-width: 100%;
+    }
+    .terms-of-service-wrapper section h3{
+        font-size: 18.83px;
+    }
+    /* expedition packages */
+    .expedition-packages-wrapper{
+        margin: 0 5%;
+    }
+    #premium-packages section{
+        background-color: #C4C896;
+        border-radius: 1vh;
+        margin-bottom: 30px;
+    }
+    .premium-package-wrapper{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 15px 15px 15px 15px;
+    }
+    .premium-packages-written{
+        width: 46%;
+    }
+    .premium-packages-written p,a{
+        font-size: 1.15em;
+    }
+    .premium-packages-buy{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        font-weight: bold;
+    }
+    .premium-packages-buy a{
+        align-self: center;
+        padding: 10px 20px;
+    }
+    .premium-packages-image{
+        width: 46%;
+        max-height:30vh;
+        object-fit: cover;
+        margin:15px 0;
+    }
+    #basic-packages{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    #basic-packages h2,.line-break{
+        width: 100%;
+    }
+    #basic-packages section{
+        width: 46%;
+        background-color: #C4C896;
+        border-radius: 1vh;
+        margin-bottom: 30px;
+    }
+    .basic-package-wrapper{
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 15px 15px 15px 15px;
+    }
+    .basic-package-wrapper img{
+        order:0;
+    }
+    .basic-package-written{
+        order:1;
+    }
+    .basic-packages-buy{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        font-weight: bold;
+    }
 
-        .customer-experiences figure {
-            height: 50%;
-            width: 100%;
-        }
-
-        .customer-experiences img {
-            width: 100%;
-            height: 30%;
-        }
-
+    .basic-packages-buy a{
+        align-self: center;
+        padding: 10px 20px;
+    }
+    .expedition-packages-wrapper h2{
+        margin-bottom:4px;
+    }
+    .line-break{
+        border-bottom: solid #14183B;
+        margin-bottom:20px;
+    }
+    .mega-premium-banner{
+        background-image: url(images/expedition-images/hunting-dinosaurs-images.jpeg);
+        background-size: cover;
+        background-position-y: center;
+        height:80vh;
+        border-radius: 1vh;
+        margin-bottom: 20px;
+        display: flex;
+    }
+    .mega-premium-banner>div{
+        width: 50%;
+        margin: auto;
+        background-color: #C4C896;
+        padding: 20px;
+        max-width: 650px;
+        border-radius: 2vh;
+    }
+    .mega-premium-banner div p,a{
+        font-size: 1.15em;
+    }
+    .mega-packages-buy{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        font-weight: bold;
+    }
+    .mega-packages-buy a{
+        align-self: center;
+        padding: 10px 20px;
+    }
+    .mega-packages-buy a:hover{
+        background-color: #7dc69e;
+    }
+    .mega-packages-buy a:active{
+        background-color: #236154;
+        color: #F8F8F0;
     }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel='stylesheet' href='style.css'/>
+    <script src="js/faux-cart.js"></script>
 </head>
 
 <body>
@@ -34,8 +35,14 @@
             <details>
                 <summary>Order Summary</summary>
                 <dl>
+                    <dt>Total Items</dt>
+                    <dd id="cartItemCount">#</dd>
+
                     <dt>Order Total</dt>
-                    <dd><strong>#</strong></dd>
+                    <dd><strong id="cartTotal">#</strong></dd>
+
+                    <dt>Empty Your Cart</dt>
+                    <dd><a href="#" id="emptyCart">Empty Cart</a><dd>
                 </dl>
             </details>
             <details>
