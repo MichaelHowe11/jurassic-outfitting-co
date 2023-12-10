@@ -90,11 +90,9 @@ h5{
     margin: 4px 0 4px 20px; 
 }
 .button:hover{
-    border: solid #5B9676;
     background-color: #7dc69e;
 }
 .button:active{
-    border: solid #5B9676;
     background-color: #236154;
     color: #F8F8F0;
 }
@@ -111,11 +109,9 @@ h5{
     margin: 4px 0 4px 20px; 
 }
 .addToCart:hover{
-    border: solid #5B9676;
     background-color: #7dc69e;
 }
 .addToCart:active{
-    border: solid #5B9676;
     background-color: #236154;
     color: #F8F8F0;
 }
@@ -157,7 +153,7 @@ h5{
     padding:10px;
 }
 .categories-homepage, .customer-experiences{
-    margin: 0 14%;
+    margin: 0 10%;
 }
 .categories-homepage{
     display: flex;
@@ -182,6 +178,9 @@ h5{
 }
 .categories-homepage section a:hover{
     text-decoration: underline;
+}
+.categories-homepage section a:last-of-type:hover{
+    text-decoration: none;
 }
 .categories-homepage section a h3:active{
     text-decoration: underline;
@@ -222,7 +221,9 @@ h5{
     justify-content: space-between;
     margin: 0 20%;
 }
-
+.product-detail-wrapper figure img{
+    border-radius: 1vh;
+}
 .product-detail-written{
     display:flex;
     flex-flow:row wrap;
@@ -272,11 +273,9 @@ h5{
     margin: 4px 0 4px 20px; 
 }
 .size-button:hover{
-    border: solid #5B9676;
     background-color: #7dc69e;
 }
 .size-button.active{
-    border: solid #5B9676;
     background-color: #236154;
     color: #F8F8F0;
 }
@@ -363,7 +362,9 @@ h5{
     object-fit: cover;
     object-position: center;
 }
-
+.founder-card-wrapper a{
+    font-size: 16px;
+}
 /* expedition detail */
 .expedition-detail-wrapper section{
     margin:0 10%;
@@ -556,6 +557,7 @@ option{
 }
 #premium-packages section{
     background-color: #C4C896;
+    border-radius: 1vh;
     margin-bottom: 30px;
 }
 .premium-package-wrapper{
@@ -597,6 +599,7 @@ option{
 #basic-packages section{
     width: 46%;
     background-color: #C4C896;
+    border-radius: 1vh;
     margin-bottom: 30px;
 }
 .basic-package-wrapper{
@@ -634,6 +637,7 @@ option{
     background-position-y: center;
     height:80vh;
     border-radius: 1vh;
+    margin-bottom: 20px;
     display: flex;
 }
 .mega-premium-banner>div{
@@ -658,11 +662,9 @@ option{
     padding: 10px 20px;
 }
 .mega-packages-buy a:hover{
-    border: solid #5B9676;
     background-color: #7dc69e;
 }
 .mega-packages-buy a:active{
-    border: solid #5B9676;
     background-color: #236154;
     color: #F8F8F0;
 }
