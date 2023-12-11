@@ -950,6 +950,7 @@ option{
     /* expedition detail */
     .expedition-detail-wrapper section{
         margin:0 5%;
+        height: 70vh;
     }
     .expedition-banner{
         background-position-x: center;
