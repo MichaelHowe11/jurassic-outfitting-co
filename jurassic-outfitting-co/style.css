@@ -1,4 +1,6 @@
 /* every page */
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono&family=Oxanium&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
     box-sizing: border-box;
@@ -11,6 +13,57 @@ body{
 }
 header{
     background-color: #B2A696;
+}
+.header {
+    border:none;
+    width:100%;
+    font-family:'Overpass Mono', monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0rem;
+    background-color: #D7D3C6;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.headerItem {
+    display: inline-block;
+    position: relative;
+    color: #14183B;
+    font-size: 20px;
+}
+.headerItem a{
+    font-size: 20px;
+    color: #14183B;
+}
+.headerItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+    border-radius: 50px;
+}
+.headerItem:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+.headerItem a:link {
+    text-decoration: none;
+}
+.headerItem a:visited {
+    text-decoration: none;
+}
+.headerItem a:hover {
+    text-decoration: none;
+}
+.headerItem a:active {
+    text-decoration: none;
 }
 .mobile-nav{
     display: none;
@@ -784,11 +837,25 @@ option{
 }
 @media only screen and (max-width:640px) {
     /* every page */
+    .header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .headerItem {
+        font-size: 7px;
+    }
+    .headerItem a{
+        font-size: 7px;
+    }
+    .headerItem::after {
+        height: 1px;
+    }
     .site-nav{
         display: none;
     }
     .mobile-nav{
         display: block;
+        z-index: 1;
     }
     .mobile-nav{
         display: flex;
@@ -829,7 +896,7 @@ option{
     #hamburger-links a:active{
         background-color: #5B9676;
      }
-    /*the above is a combination of https://www.w3schools.com/howto/howto_js_mobile_navbar.asp,chatGPT, and my own modifications to make a mobile nav bar*/
+    /*the above (.mobile-nav) is a combination of https://www.w3schools.com/howto/howto_js_mobile_navbar.asp and my own modifications to make a mobile nav bar*/
     .button{
         font-weight: bold;
         border-radius: 0.5vh;
