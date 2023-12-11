@@ -12,6 +12,9 @@ body{
 header{
     background-color: #B2A696;
 }
+.mobile-nav{
+    display: none;
+}
 .site-nav{
     height:15vh;
     margin:0 10% 0 10%;
@@ -57,6 +60,7 @@ footer{
 .footer-wrapper section ul li{
     list-style-type: none;
     margin-bottom:4px;
+    font-style: normal;
 }
 .footer-wrapper section ul li a{
     font-size: 15px;
@@ -225,10 +229,11 @@ h5{
 }
 .product-detail-written{
     display:flex;
-    flex-flow:row wrap;
+    flex-flow:column nowrap;
 }
 .product-detail-written h2{
     width:100%;
+    margin-bottom: 0;
 }
 .product-detail-written h4{
     margin-bottom: 0;
@@ -382,6 +387,30 @@ h5{
     border-bottom-left-radius: 1vh;
     border-bottom-right-radius: 1vh;
     display: flex;
+}
+.feeding{
+    background-image: url(images/expedition-images/feeding-dinosaurs-image.jpg)
+}
+.hunting{
+    background-image: url(images/expedition-images/hunting-dinosaurs-images.jpeg)
+}
+.night{
+    background-image: url(images/expedition-images/night-tour-image.jpg)
+}
+.triceratops{
+    background-image: url(images/expedition-images/riding-triceratops-image.jpg)
+}
+.rafting{
+    background-image: url(images/expedition-images/rafting-tour-image.jpg)
+}
+.rex{
+    background-image: url(images/expedition-images/vechicle-and-trex-image.jpg)
+}
+.vechicle{
+    background-image: url(images/expedition-images/vechicle-tour-image.jpg)
+}
+.volcano{
+    background-image: url(images/expedition-images/volcano-hike-image.jpg)
 }
 .expedition-banner div{
     display: flex;
@@ -686,11 +715,108 @@ option{
 /* shopping cart */
 .shopping-cart-wrapper{
     margin: 0 10%;
+    min-height: 100vh;
 }
-
-
+#cart{
+    margin-bottom: 20px;
+}
+.cartItem{
+    background-color: #C4C896;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 1vh;
+    padding: 10px;
+}
+.cartItem img{
+    width: 25%;
+    border-radius: 2vh;
+}
+.cartItemInfo{
+    width: 73%;
+}
+.cartItemInfo h3{
+    margin-top: 0;
+}
+.removeBtn{
+    background-color: #5B9676;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5vh;
+    padding: 4px;
+}
+.removeBtn:hover{
+    background-color: #7dc69e;
+}
+.removeBtn:active{
+    background-color: #236154;
+    color: #F8F8F0;
+}
+#emptyCart{
+    background-color: #5B9676;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5vh;
+    padding: 4px;
+}
+#emptyCart:hover{
+    background-color: #7dc69e;
+}
+#emptyCart:active{
+    background-color: #236154;
+    color: #F8F8F0;
+}
 @media only screen and (max-width:640px) {
     /* every page */
+    .site-nav{
+        display: none;
+    }
+    .mobile-nav{
+        display: block;
+    }
+    .mobile-nav{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .mobile-nav a:last-child{
+        padding-right: 5%;
+    }
+    .mobile-bars{
+        padding-left: 5%;
+    }
+    .mobile-nav a{
+        color: #14183B;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .mobile-nav h1{
+        font-size: 30px;
+    }
+    .mobile-nav a:active{
+        background-color: #5B9676;
+     }
+    .mobile-bars:active{
+        background-color: #B2A696;
+     }
+    /*the above is a combination of https://www.w3schools.com/howto/howto_js_mobile_navbar.asp,chatGPT, and my own modifications to make a mobile nav bar*/
+    #hamburger-links {
+        display: none;
+        position: absolute; 
+        top: 100%; 
+        background-color: #B2A696; 
+    }
+    #hamburger-links a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333; 
+    }
     .button{
         font-weight: bold;
         border-radius: 0.5vh;
@@ -913,5 +1039,44 @@ option{
     }
     .mega-packages-buy p{
         margin-bottom: 30px;
+    }
+    /* shopping cart */
+    .shopping-cart-wrapper{
+        margin: 0 5%;
+    }
+    .shopping-cart-wrapper h2{
+        font-size: 21px;
+    }
+    .cartItem{
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    .cartItem img{
+        width: 100%;
+    }
+    .cartItemInfo{
+        margin-top: 10px;
+        width: 100%;
+    }
+    /* product categories */
+    .prod-category-header{
+        margin:15px 40%;
+        font-size: 21px;
+        width: 100%;
+    }
+    .product-categories-wrapper{
+        margin: 0 5%;
+    }
+    .product-categories-wrapper section{
+        width: 70%;
+    }
+    .product-categories-wrapper nav{
+        width: 30%;
+    }
+    .product-categories-wrapper nav h3{
+        font-size: 18.83px;
+    }
+    .product-categories-wrapper section article{
+        width:95%;
     }
 }

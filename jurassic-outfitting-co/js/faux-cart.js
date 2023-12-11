@@ -1,6 +1,6 @@
 /* i used chatGPT so that it could find elements through all the different hml elements dynamically */
 
-const shopID = 'MyTestSixteen';
+const shopID = 'Jurassic Outfitting Corporation';
 const cartTotalID = 'cartTotal';
 const cartItemCountID = 'cartItemCount';
 
