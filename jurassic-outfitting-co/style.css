@@ -798,13 +798,6 @@ option{
     .mobile-nav h1{
         font-size: 30px;
     }
-    .mobile-nav a:active{
-        background-color: #5B9676;
-     }
-    .mobile-bars:active{
-        background-color: #B2A696;
-     }
-    /*the above is a combination of https://www.w3schools.com/howto/howto_js_mobile_navbar.asp,chatGPT, and my own modifications to make a mobile nav bar*/
     #hamburger-links {
         display: none;
         position: absolute; 
@@ -817,6 +810,10 @@ option{
         text-decoration: none;
         color: #333; 
     }
+    #hamburger-links a:active{
+        background-color: #5B9676;
+     }
+    /*the above is a combination of https://www.w3schools.com/howto/howto_js_mobile_navbar.asp,chatGPT, and my own modifications to make a mobile nav bar*/
     .button{
         font-weight: bold;
         border-radius: 0.5vh;
