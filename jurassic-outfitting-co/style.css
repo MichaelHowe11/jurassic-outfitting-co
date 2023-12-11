@@ -592,6 +592,9 @@ option{
     align-self: center;
     padding: 10px 20px;
 }
+.premium-packages-buy p{
+    margin-bottom: 30px;
+}
 .premium-packages-image{
     width: 46%;
     max-height:30vh;
@@ -629,10 +632,12 @@ option{
     justify-content: space-around;
     font-weight: bold;
 }
-
 .basic-packages-buy a{
     align-self: center;
     padding: 10px 20px;
+}
+.basic-packages-buy p{
+    margin-bottom: 30px;
 }
 .expedition-packages-wrapper h2{
     margin-bottom:4px;
@@ -853,117 +858,53 @@ option{
     .expedition-packages-wrapper{
         margin: 0 5%;
     }
-    #premium-packages section{
-        background-color: #C4C896;
-        border-radius: 1vh;
-        margin-bottom: 30px;
+    .expedition-packages-wrapper h2{
+        font-size: 21px;
+    }
+    .expedition-packages-wrapper h3{
+        font-size: 18.83px;
+    }
+    #premium-packages h2{
+        font-size: 21px;
     }
     .premium-package-wrapper{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 15px 15px 15px 15px;
+        flex-flow: column-reverse nowrap;
     }
     .premium-packages-written{
-        width: 46%;
-    }
-    .premium-packages-written p,a{
-        font-size: 1.15em;
-    }
-    .premium-packages-buy{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        font-weight: bold;
-    }
-    .premium-packages-buy a{
-        align-self: center;
-        padding: 10px 20px;
-    }
-    .premium-packages-image{
-        width: 46%;
-        max-height:30vh;
-        object-fit: cover;
-        margin:15px 0;
-    }
-    #basic-packages{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-    }
-    #basic-packages h2,.line-break{
         width: 100%;
     }
+    .premium-packages-written p,a{
+        font-size: 16px;
+    }
+    .premium-packages-image{
+        width: 100%;
+    }
+    #basic-packages{
+        flex-flow: column nowrap;
+    }
     #basic-packages section{
-        width: 46%;
-        background-color: #C4C896;
-        border-radius: 1vh;
-        margin-bottom: 30px;
+        width: 100%;
     }
     .basic-package-wrapper{
-        display: flex;
         flex-flow: column nowrap;
-        padding: 15px 15px 15px 15px;
     }
     .basic-package-wrapper img{
-        order:0;
-    }
-    .basic-package-written{
         order:1;
     }
-    .basic-packages-buy{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        font-weight: bold;
-    }
-
-    .basic-packages-buy a{
-        align-self: center;
-        padding: 10px 20px;
-    }
-    .expedition-packages-wrapper h2{
-        margin-bottom:4px;
-    }
-    .line-break{
-        border-bottom: solid #14183B;
-        margin-bottom:20px;
+    .basic-package-written{
+        order:0;
     }
     .mega-premium-banner{
-        background-image: url(images/expedition-images/hunting-dinosaurs-images.jpeg);
-        background-size: cover;
-        background-position-y: center;
-        height:80vh;
-        border-radius: 1vh;
-        margin-bottom: 20px;
-        display: flex;
+        background-position-x:center;
+        height:70vh;
     }
     .mega-premium-banner>div{
-        width: 50%;
-        margin: auto;
-        background-color: #C4C896;
-        padding: 20px;
-        max-width: 650px;
-        border-radius: 2vh;
+        width: 90%;
     }
     .mega-premium-banner div p,a{
-        font-size: 1.15em;
+        font-size: 16px;
     }
-    .mega-packages-buy{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        font-weight: bold;
-    }
-    .mega-packages-buy a{
-        align-self: center;
-        padding: 10px 20px;
-    }
-    .mega-packages-buy a:hover{
-        background-color: #7dc69e;
-    }
-    .mega-packages-buy a:active{
-        background-color: #236154;
-        color: #F8F8F0;
+    .mega-packages-buy p{
+        margin-bottom: 30px;
     }
 }
