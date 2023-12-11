@@ -768,6 +768,19 @@ option{
     background-color: #236154;
     color: #F8F8F0;
 }
+#terms-of-service{
+    font-size: 15px;
+}
+#terms-of-service:link{
+    text-decoration: none;
+}
+#terms-of-service:hover{
+    text-decoration: underline;
+}
+#terms-of-service:active{
+    text-decoration: underline;
+    color:#5B9676;
+}
 @media only screen and (max-width:640px) {
     /* every page */
     .site-nav{
@@ -797,6 +810,8 @@ option{
     }
     .mobile-nav h1{
         font-size: 30px;
+        padding: 0;
+        margin: 0;
     }
     #hamburger-links {
         display: none;

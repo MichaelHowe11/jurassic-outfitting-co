@@ -7,10 +7,22 @@
     <title>Shopping Cart</title>
     <link rel='stylesheet' href='style.css'/>
     <script src="js/faux-cart.js"></script>
+    <script src="js/mobile-nav.js"></script>
 </head>
 
 <body>
     <header>
+        <div class="mobile-nav">
+            <div id="hamburger-links">
+                <a href="expedition-packages.html">Packages</a>
+                <a href="product-categories/all-products.html">Products</a>
+                <a href="about.html">About</a>
+            </div>
+            <a href="javascript:void(0);" class="mobile-bars" onclick="hamburgerFunction()"><img src="images/header-images/bar.svg" alt="navigation bars"></a>
+            <a href="home.html"><img src="images/header-images/logo.svg"
+                    alt="jurassic outfitting company logo; homepage button"></a>
+            <h1><a href="shopping-cart.html"><img src="images/header-images/shopping-cart.svg" alt="shopping cart"></a></h1>
+        </div>
         <nav class="site-nav">
             <a href="home.html"><img src="images/header-images/logo.svg"
                     alt="jurassic outfitting company logo; homepage button"></a>
@@ -29,7 +41,7 @@
             
 
         </div>
-
+        <a id="terms-of-service" href="terms-of-service.html">Terms of Service</a>
     </main>
     <footer>
         <div class="footer-wrapper">
