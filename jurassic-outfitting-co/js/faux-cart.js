@@ -1,26 +1,15 @@
-const
-    // set the name of your shop here
-    shopID = 'testShop',
-    // match the following attributes to the classes on your products
-    productClass = 'product',
-    imageClass = 'prodImage',
-    nameClass = 'prodName',
-    descClass = 'prodDesc',
-    priceClass = 'prodPrice',
-    // match the following attributes to your cart total elements
-    cartTotalID = 'cartTotal',
-    cartItemCountID = 'cartItemCount';
+/* i used chatGPT so that it could find elements through all the different hml elements dynamically */
 
+const shopID = 'MyTestSixteen';
+const cartTotalID = 'cartTotal';
+const cartItemCountID = 'cartItemCount';
 
-// check if shop exists in local storage, create it if not
 if (localStorage.getItem(shopID) === null) {
     localStorage.setItem(shopID, JSON.stringify({ cart: [] }));
 }
 
-//initialize the shop object
 let shop = JSON.parse(localStorage.getItem(shopID));
 
-// Define the Product class
 class Product {
     constructor(name, desc, price, imgSrc, qty = 1) {
         this.name = name;
@@ -32,66 +21,72 @@ class Product {
 }
 
 function addToCart(e) {
-    // prevent default link behavior
     e.preventDefault();
-    // get the product attributes from DOM
-    let product = e.target.parentElement.children;
-    // create an array to hold product attributes
-    let attributes = ['name', 'desc', 'price', 'imgSrc'];
-    // loop through the product attributes and assign them to the array
-    for (let node of product) {
-        if (node.className === nameClass) attributes[0] = node.innerText;
-        if (node.className === descClass) attributes[1] = node.innerText;
-        if (node.className === priceClass) attributes[2] = parseFloat(node.innerText);
-        if (node.className === imageClass) attributes[3] = node.currentSrc;
+    let productContainer = e.target.closest('.product');
+    if (!productContainer) {
+        console.log("Error: Product container not found");
+        return;
     }
-    // check if any attributes are undefined
-    if (attributes.includes(undefined)) {
+
+    let attributes = {
+        name: findTextContent(productContainer, 'prodName'),
+        desc: findTextContent(productContainer, 'prodDesc'),
+        price: parseFloat(findTextContent(productContainer, 'prodPrice')),
+        imgSrc: findImageSrc(productContainer, 'prodImage'),
+    };
+
+    if (Object.values(attributes).includes(undefined)) {
         console.log("Error: One or more attributes are undefined, check your class names");
-        return; // exit function
+        return;
     }
-    // check if the item is already in the cart
+
     for (let item of shop.cart) {
-        if (item.name === attributes[0]) {
-            // increase quantity by 1
+        if (item.name === attributes.name) {
             item.qty++;
-            // update local storage
             localStorage.setItem(shopID, JSON.stringify(shop));
             console.log("Item already in cart, increased quantity by 1");
-            updateCartTotals()
-            return; // exit function
+            updateCartTotals();
+            return;
         }
     }
-    // add item to cart
-    shop.cart.push(new Product(...attributes));
-    // update local storage
+
+    shop.cart.push(new Product(...Object.values(attributes)));
     localStorage.setItem(shopID, JSON.stringify(shop));
-    // update cart totals
-    updateCartTotals()
+    updateCartTotals();
+}
+
+function findTextContent(container, className) {
+    let element = container.querySelector(`.${className}`);
+    return element ? element.textContent.trim() : undefined;
+}
+
+function findImageSrc(container, className) {
+    let element = container.querySelector(`.${className}`);
+    return element ? element.src : undefined;
 }
 
 function cartTotal() {
     let total = 0;
-    let itemCount = 0
-    // check if cart is empty
+    let itemCount = 0;
+
     if (shop.cart.length === 0) return [total, itemCount];
-    // loop through cart and add up total
+
     for (let item of shop.cart) {
         total += item.price * item.qty;
         itemCount += item.qty;
     }
-    // return total and item count
-    return [total, itemCount]
+
+    return [total, itemCount];
 }
 
 function updateCartTotals() {
     let total = cartTotal();
-    // check if cartTotal element exists and update if applicable
-    if(document.getElementById(cartTotalID) !== null) {
+
+    if (document.getElementById(cartTotalID) !== null) {
         document.getElementById(cartTotalID).innerHTML = `${total[0].toFixed(2)}`;
     }
-    // check if cartItemCount element exists and update if applicable
-    if(document.getElementById(cartItemCountID) !== null) {
+
+    if (document.getElementById(cartItemCountID) !== null) {
         document.getElementById(cartItemCountID).innerHTML = `${total[1]}`;
     }
 }
@@ -99,12 +94,12 @@ function updateCartTotals() {
 function updateCart() {
     let cart = document.getElementById('cart');
     let total = 0;
-    // check if cart is empty
+
     if (shop.cart.length === 0) {
         cart.innerHTML = '<h3>Your cart is empty</h3>';
         return;
     }
-    // loop through cart and add items to cart element
+
     for (let [index, item] of shop.cart.entries()) {
         total += item.price * item.qty;
         cart.innerHTML += `
@@ -120,18 +115,17 @@ function updateCart() {
                     <a id="${index}" href="#" class="removeBtn">Remove</a>
                 </div>
             </div>
-            
         </div>
         `;
     }
-    // add total to cart element
+
     cart.innerHTML += `
     <div class="cartTotal">
         <h3>Total: $${total.toFixed(2)}</h3>
         <a href="#" id="emptyCart">Empty Cart</a>
     </div>
     `;
-    // add event listeners to buttons
+
     document.querySelectorAll('.removeBtn').forEach(button => button.addEventListener('click', removeItem));
     document.getElementById('emptyCart').addEventListener('click', emptyCart);
 }
@@ -139,39 +133,30 @@ function updateCart() {
 function removeItem(e) {
     e.preventDefault();
     let index = e.target.id;
-    // remove item from cart
     shop.cart.splice(index, 1);
-    // update local storage
     localStorage.setItem(shopID, JSON.stringify(shop));
-    // reload page to update cart
     location.reload();
 }
 
 function emptyCart() {
-    // empty cart
     shop.cart = [];
-    // update local storage
     localStorage.setItem(shopID, JSON.stringify(shop));
-    // reload page to update cart
     location.reload();
 }
 
-// Add Event listners when DOM is ready
 document.addEventListener("DOMContentLoaded", function () {
-    // check if addToCart buttons exist
     if (document.querySelectorAll('.addToCart') !== null) {
         let cartButtons = document.querySelectorAll('.addToCart');
         cartButtons.forEach(button => button.addEventListener('click', addToCart))
     }
-    // check if cart element exists
+
     if (document.getElementById('cart') !== null) {
         updateCart();
     }
-    // check if cart has items and update totals
+
     if (shop.cart.length >= 0) {
         updateCartTotals();
     }
 
-    // Log shop object to console
     console.log("Ready", shop.cart);
 });
