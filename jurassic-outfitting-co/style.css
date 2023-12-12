@@ -270,6 +270,9 @@ h5{
     border: 4vh solid transparent;
     border-image: url(images/customer-experience-images/jp-border-image.png) 40 round;
 }
+.customer-experiences figure img{
+    width: 100%;
+}
 /* product detail */
 .product-detail-wrapper{
     display:flex;
