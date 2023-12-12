@@ -1015,6 +1015,9 @@ option{
         font-size: 18.83px
     }
     /* expedition detail */
+    .expedition-detail-wrapper section{
+        margin: 0 5%;
+    }
     .expedition-detail-wrapper section:first-of-type{
         margin:0 5%;
         height: 70vh;
